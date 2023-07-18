@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Password Generator</title>
+        <link href="style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/069b3a0714.js" crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
+    </head>
+    
+    <body>
+        <h1><i class="fa-solid fa-shield-halved"></i> Password Generator</h1>
+        <form method='get' action="password.php">
+            <p class = "settings">Settings</p>
+            <hr>
+            <label for ="length">Length:</label>
+            <input id="length" name="length" type="number" value="10"><br><br>
+            <label for = "lowercase">Lowercase:</label>
+            <input id="lowercase" name="lowercase" type="checkbox" checked><br><br>
+            <label for = "uppercase">Uppercase:</label>
+            <input id="uppercase" name="uppercase" type="checkbox" checked><br><br>
+            <label for = "number">Number:</label>
+            <input id="number" name="number" type="checkbox" checked><br><br>
+            <label for = "special">Special character:</label>
+            <input id="special" name="special" type="checkbox" checked><br><br>
+            <label for="comment">Comment:</label>
+            <input id="comment" name="comment" type="text" maxlength="100"><br><br>
+            <button type = "button" onclick='generatePassword()'>Generate Password</button><br><br>
+            <p>My Password:</p>
+            <div class='password-container'>
+                <input type='text' class="pw" name='password'/>
+                <i class="fa-solid fa-copy"></i>
+                <div class="copy-message-container"></div>
+            </div><br>
+            <button type="submit">Save</button>
+        </form>
+
+    </body>
+</html>
